@@ -4,6 +4,7 @@ using UnityEngine.Events;
 public class Door : MonoBehaviour {
 	[SerializeField] private UnityEvent onOpened, onClosed;
 	[SerializeField] private bool openOnStart = false;
+	[SerializeField] private UnityEvent open, close;
 
 	private bool isOpen = false;
 	public bool IsOpen {
@@ -13,10 +14,12 @@ public class Door : MonoBehaviour {
 				return;
 
 			if(isOpen = value) {
+				open?.Invoke();
 				Debug.Log($"{this} is opened.", this);
 				onOpened?.Invoke();
 			}
 			else {
+				close?.Invoke();
 				Debug.Log($"{this} is closed.", this);
 				onClosed?.Invoke();
 			}
