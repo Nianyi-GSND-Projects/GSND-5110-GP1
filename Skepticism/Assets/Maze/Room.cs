@@ -10,8 +10,8 @@ public class Room : MonoBehaviour {
 		onEnter += OnPlayerEnter;
 		onExit += OnPlayerExit;
 
-		boundingRange.onEnter += onEnter;
-		interiorRange.onExit += onExit;
+		boundingRange.OnEnter += onEnter;
+		interiorRange.OnExit += onExit;
 	}
 
 	void OnPlayerEnter() {
