@@ -34,17 +34,20 @@ public class PlayerInputHandler : MonoBehaviour {
 
 	#region Handlers
 	// Movement
-
 	protected void OnMoveVelocity(InputValue value) {
 		var raw = value.Get<Vector2>();
 		moveVelocity.x = raw.x;
 		moveVelocity.z = raw.y;
 	}
-	// Orientation
 
+	// Orientation
 	protected void OnOrientDelta(InputValue value) {
 		Vector2 raw = value.Get<Vector2>();
 		player.OrientDelta(raw);
+	}
+
+	protected void OnInteract() {
+		player.Interact();
 	}
 	#endregion
 }

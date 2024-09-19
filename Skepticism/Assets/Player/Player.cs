@@ -1,9 +1,8 @@
 using UnityEngine;
-using UnityEngine.Profiling;
 
 [RequireComponent(typeof(CharacterController))]
 public class Player : MonoBehaviour {
-	[SerializeField] private Transform eye;
+	[SerializeField] private Transform head, eye;
 	[SerializeField] private CharacterController controller;
 	[Range(0, 5)] public float speed = 1;
 
@@ -32,7 +31,7 @@ public class Player : MonoBehaviour {
 
 	public float Zenith {
 		get {
-			Vector3 forward = eye.forward;
+			Vector3 forward = head.forward;
 			float y = forward.y;
 			forward.y = 0;
 			return Mathf.Atan2(y, forward.magnitude);
@@ -40,7 +39,17 @@ public class Player : MonoBehaviour {
 		set {
 			float degree = value * 180 / Mathf.PI;
 			degree = Mathf.Clamp(degree, -90, 90);
-			eye.localRotation = Quaternion.Euler(-degree, 0, 0);
+			head.localRotation = Quaternion.Euler(-degree, 0, 0);
 		}
+	}
+
+	public void Interact() {
+		Ray ray = new(eye.position, eye.forward);
+		if(!Physics.Raycast(ray, out RaycastHit hit))
+			return;
+		var target = hit.collider.transform;
+		if(!target.TryGetComponent<Interactable>(out var interactable))
+			return;
+		interactable.Interact();
 	}
 }
