@@ -2,9 +2,15 @@ using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
 public class Player : MonoBehaviour {
+	[SerializeField] private PlayerInputHandler input;
 	[SerializeField] private Transform head, eye;
 	[SerializeField] private CharacterController controller;
 	[Range(0, 5)] public float speed = 1;
+
+	public bool ReceivesInput {
+		get => input.enabled;
+		set => input.enabled = value;
+	}
 
 	public void OrientDelta(Vector2 delta) {
 		Azimuth += delta.x;

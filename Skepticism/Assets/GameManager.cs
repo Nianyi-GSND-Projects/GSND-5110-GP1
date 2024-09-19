@@ -1,6 +1,4 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour {
 	#region Singleton
@@ -14,7 +12,31 @@ public class GameManager : MonoBehaviour {
 	}
 	#endregion
 
+	#region
+	[SerializeField] private Player player;
+	[SerializeField] private CanvasGroup victoryScreen, deathScreen;
+	[SerializeField] private Room victoryRoom;
+	#endregion
+
 	#region Gameplay events
-	// Define appropriate gameplay event handlers here.
+	public void OnEnteredRoom(Room room) {
+		if(room == victoryRoom)
+			OnWinning();
+		else {
+			if(!room.isOnTheRightPath)
+				OnEnteredWrongRoom();
+		}
+	}
+
+	private void OnEnteredWrongRoom() {
+		Debug.LogWarning("The player entered a wrong room.");
+		player.ReceivesInput = false;
+		deathScreen.gameObject.SetActive(true);
+	}
+
+	private void OnWinning() {
+		player.ReceivesInput = false;
+		victoryScreen.gameObject.SetActive(true);
+	}
 	#endregion
 }

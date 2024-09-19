@@ -75,6 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b94765c5a2098ab4e8e5bdf4c8384220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  input: {fileID: 3090777821606517221}
   head: {fileID: 8859203562233618964}
   eye: {fileID: 3397150907788825330}
   controller: {fileID: 6769693093549549387}
