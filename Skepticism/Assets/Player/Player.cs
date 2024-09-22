@@ -12,6 +12,16 @@ public class Player : MonoBehaviour {
 		set => input.enabled = value;
 	}
 
+	public bool ReceivesMovementInput {
+		get => input.usesMovement;
+		set => input.usesMovement = value;
+	}
+
+	public bool ReceivesOrientationInput {
+		get => input.usesOrientation;
+		set => input.usesOrientation = value;
+	}
+
 	public void OrientDelta(Vector2 delta) {
 		Azimuth += delta.x;
 		Zenith += delta.y;

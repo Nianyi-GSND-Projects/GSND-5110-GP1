@@ -7,6 +7,9 @@ public class PlayerInputHandler : MonoBehaviour {
 	private Player player;
 	[SerializeField] private PlayerInput playerInput;
 	private Vector3 moveVelocity;
+
+	public bool usesMovement = true;
+	public bool usesOrientation = true;
 	#endregion
 
 	#region Life cycle
@@ -18,7 +21,9 @@ public class PlayerInputHandler : MonoBehaviour {
 	}
 
 	protected void FixedUpdate() {
-		player.MoveVelocity(moveVelocity);
+		if(usesMovement) {
+			player.MoveVelocity(moveVelocity);
+		}
 	}
 
 	protected void OnEnable() {
@@ -35,6 +40,10 @@ public class PlayerInputHandler : MonoBehaviour {
 	#region Handlers
 	// Movement
 	protected void OnMoveVelocity(InputValue value) {
+		if(!usesMovement) {
+			moveVelocity = default;
+			return;
+		}
 		var raw = value.Get<Vector2>();
 		moveVelocity.x = raw.x;
 		moveVelocity.z = raw.y;
@@ -42,6 +51,8 @@ public class PlayerInputHandler : MonoBehaviour {
 
 	// Orientation
 	protected void OnOrientDelta(InputValue value) {
+		if(!usesOrientation)
+			return;
 		Vector2 raw = value.Get<Vector2>();
 		player.OrientDelta(raw);
 	}

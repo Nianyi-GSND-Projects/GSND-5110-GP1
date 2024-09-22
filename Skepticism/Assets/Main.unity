@@ -2305,6 +2305,7 @@ MonoBehaviour:
   player: {fileID: 792486162}
   teleportDestination: {fileID: 69531144}
   stateMachine: {fileID: 826340819}
+  endingRoom: {fileID: 1331246930}
   narrationSource: {fileID: 826340820}
 --- !u!4 &826340818
 Transform:
@@ -3832,6 +3833,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1531788890926593099, guid: 25571a98c1d07cb4393754079af5388d, type: 3}
   m_PrefabInstance: {fileID: 453821523}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1331246930 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2754715101092682511, guid: 25571a98c1d07cb4393754079af5388d, type: 3}
+  m_PrefabInstance: {fileID: 1124384428}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b4e0f27db27beb448c25f9972272cf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1368492031 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8749349108342283665, guid: 25571a98c1d07cb4393754079af5388d, type: 3}

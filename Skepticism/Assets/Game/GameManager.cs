@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour {
 	#region Singleton
@@ -17,6 +16,13 @@ public class GameManager : MonoBehaviour {
 	[SerializeField] private Player player;
 	[SerializeField] private Transform teleportDestination;
 	[SerializeField] private Animator stateMachine;
+	[SerializeField] private Room endingRoom;
+
+	public void IncreaseCounter(string counterName, int amount = 1) {
+		var value = stateMachine.GetInteger(counterName);
+		++value;
+		stateMachine.SetInteger(counterName, value);
+	}
 	#endregion
 
 	#region Gameplay events
@@ -28,6 +34,14 @@ public class GameManager : MonoBehaviour {
 			startingRoom = room;
 		currentRoom = room;
 		stateMachine.SetBool("Is In Starting Room", currentRoom == startingRoom);
+
+		if(hasEnteredMidGame) {
+			bool doorType = room.isOnTheRightPath;
+			string propertyName = doorType ? "MG Green Door Count" : "MG Red Door Count";
+			IncreaseCounter(propertyName);
+		}
+
+		stateMachine.SetBool("Is In Ending Room", room == endingRoom);
 	}
 
 	public void OnExitedRoom(Room room) {
@@ -79,6 +93,11 @@ public class GameManager : MonoBehaviour {
 	public void TeleportPlayer() {
 		player.transform.SetPositionAndRotation(teleportDestination.position, teleportDestination.rotation);
 		Debug.Log("Player teleported.");
+	}
+
+	private bool hasEnteredMidGame = false;
+	public void MarkMidGameState() {
+		hasEnteredMidGame = true;
 	}
 	#endregion
 }
