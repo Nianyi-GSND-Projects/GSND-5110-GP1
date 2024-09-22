@@ -1,5 +1,5 @@
 using UnityEngine;
-using ReflectionProbeRefreshMode = UnityEngine.Rendering.ReflectionProbeRefreshMode;
+using UnityEngine.Rendering.HighDefinition;
 
 public class Room : MonoBehaviour {
 	public bool isOnTheRightPath;
@@ -18,6 +18,7 @@ public class Room : MonoBehaviour {
 	protected void Start() {
 		range.OnEnter += OnEntered;
 		range.OnExit += OnExited;
+
 	}
 
 	void OnEntered() {
@@ -33,12 +34,15 @@ public class Room : MonoBehaviour {
 		//Debug.Log($"Player exited room {name}.", this);
 
 		SetLightingMode(true, false);
+
+		GameManager.Instance.OnExitedRoom(this);
 	}
 
 	public void SetLightingMode(bool active, bool precise) {
 		if(reflectionProbe != null) {
+			var hdrpRD = reflectionProbe.GetComponent<HDAdditionalReflectionData>();
 			reflectionProbe.enabled = active;
-			reflectionProbe.refreshMode = precise ? ReflectionProbeRefreshMode.EveryFrame : ReflectionProbeRefreshMode.OnAwake;
+			hdrpRD.realtimeMode = precise ? ProbeSettings.RealtimeMode.EveryFrame : ProbeSettings.RealtimeMode.OnEnable;
 		}
 	}
 }

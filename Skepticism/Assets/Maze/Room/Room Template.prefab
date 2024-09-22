@@ -652,8 +652,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b4e0f27db27beb448c25f9972272cf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOnTheRightPath: 0
   range: {fileID: 1416636993762574620}
-  reflectionProbe: {fileID: 0}
+  reflectionProbe: {fileID: 2015068732811508678}
 --- !u!1 &5784445818447864675
 GameObject:
   m_ObjectHideFlags: 0
