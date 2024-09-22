@@ -13,45 +13,24 @@ public class GameManager : MonoBehaviour {
 	}
 	#endregion
 
-	#region
+	#region Serialized fields
 	[SerializeField] private Player player;
+	[SerializeField] private Transform teleportDestination;
+	[SerializeField] private Animator stateMachine;
 	#endregion
 
 	#region Gameplay events
 	private Room currentRoom, startingRoom;
-	public Room CurrentRoom;
+	public Room CurrentRoom => currentRoom;
 
 	public void OnEnteredRoom(Room room) {
 		if(currentRoom == null)
 			startingRoom = room;
 		currentRoom = room;
 		stateMachine.SetBool("Is In Starting Room", currentRoom == startingRoom);
-		TriggerStageEvent("enteredRoom");
 	}
 
 	public void OnExitedRoom(Room room) {
-		TriggerStageEvent("exitedRoom");
-	}
-	#endregion
-
-	#region Game states
-	public Animator stateMachine;
-
-	private IDictionary<string, System.Action> stageEvents;
-	public void ListenForStageEvents(IDictionary<string, System.Action> eventHandlers) {
-		stageEvents = eventHandlers;
-	}
-	public void ListenForStageEvents(Dictionary<string, System.Action> eventHandlers) {
-		ListenForStageEvents((IDictionary<string, System.Action>)eventHandlers);
-	}
-
-	private void TriggerStageEvent(string eventName) {
-		if(stageEvents == null)
-			return;
-		if(!stageEvents.ContainsKey(eventName))
-			return;
-		stageEvents[eventName]?.Invoke();
-		stageEvents = null;
 	}
 	#endregion
 
@@ -91,7 +70,15 @@ public class GameManager : MonoBehaviour {
 
 	private System.Collections.IEnumerator NarrationLinePlayingCoroutine(float duration) {
 		yield return new WaitForSeconds(duration);
-		TriggerStageEvent("currentNarrationLineEndsNaturally");
+	}
+	#endregion
+
+	#region Misc
+	public Player Player => player;
+
+	public void TeleportPlayer() {
+		player.transform.SetPositionAndRotation(teleportDestination.position, teleportDestination.rotation);
+		Debug.Log("Player teleported.");
 	}
 	#endregion
 }

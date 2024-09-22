@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayNarrationLine : StateMachineBehaviour {
 	public NarrationLine line;
+	public bool stopOnExit = false;
 
 	public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 		if(line != null && line.clip != null) {
@@ -14,7 +15,8 @@ public class PlayNarrationLine : StateMachineBehaviour {
 	}
 
 	public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-		GameManager.Instance.StopCurrentNarrationLine();
+		if(stopOnExit)
+			GameManager.Instance.StopCurrentNarrationLine();
 		animator.speed = 1.0f;
 	}
 }
