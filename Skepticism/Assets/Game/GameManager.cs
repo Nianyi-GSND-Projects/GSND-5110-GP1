@@ -18,10 +18,11 @@ public class GameManager : MonoBehaviour {
 	[SerializeField] private Player player;
 	[SerializeField] private Transform teleportDestination;
 	[SerializeField] private Animator stateMachine;
-	[SerializeField] private Room endingRoom;
+	[SerializeField] private Room endingRoom, pinkRoom, yellowRoom;
 	[SerializeField] private UnityEvent onStart;
 	[SerializeField] private CinemachineVirtualCamera playerCamera, topCamera;
 	[SerializeField] private float startPeekTime = 1.0f;
+	[SerializeField] private Transform endingUi;
 
 	public void IncreaseCounter(string counterName, int amount = 1) {
 		var value = stateMachine.GetInteger(counterName);
@@ -47,6 +48,8 @@ public class GameManager : MonoBehaviour {
 		}
 
 		stateMachine.SetBool("Is In Ending Room", room == endingRoom);
+		stateMachine.SetBool("Is In Pink Room", room == pinkRoom);
+		stateMachine.SetBool("Is In Yellow Room", room == yellowRoom);
 	}
 
 	public void OnExitedRoom(Room room) {
@@ -67,8 +70,8 @@ public class GameManager : MonoBehaviour {
 		yield return new WaitForSeconds(1.0f);
 
 		player.ReceivesInput = true;
-		stateMachine.SetBool("Game Started", true);
 		onStart.Invoke();
+		stateMachine.enabled = true;
 	}
 	#endregion
 
@@ -123,6 +126,13 @@ public class GameManager : MonoBehaviour {
 	public void MarkMidGameState() {
 		hasEnteredMidGame = true;
 		stateMachine.SetBool("Has Entered MG", true);
+	}
+
+	public void EnterEnding(int ending) {
+		player.ReceivesInput = false;
+		stateMachine.enabled = false;
+		endingUi.gameObject.SetActive(true);
+		endingUi.GetChild(ending - 1).gameObject.SetActive(true);
 	}
 	#endregion
 }

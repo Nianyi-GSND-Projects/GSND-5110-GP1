@@ -6,10 +6,14 @@ public class Player : MonoBehaviour {
 	[SerializeField] private Transform head, eye;
 	[SerializeField] private CharacterController controller;
 	[Range(0, 5)] public float speed = 1;
+	[SerializeField] private Canvas ui;
 
 	public bool ReceivesInput {
 		get => input.enabled;
-		set => input.enabled = value;
+		set {
+			input.enabled = value;
+			ui.gameObject.SetActive(value);
+		}
 	}
 
 	public bool ReceivesMovementInput {
