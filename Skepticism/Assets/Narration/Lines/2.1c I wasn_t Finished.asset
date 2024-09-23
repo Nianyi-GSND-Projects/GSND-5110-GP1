@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: 2.1c I wasn_t Finished
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 3709a56da3301694991ba4bbb1a59e61, type: 3}
-  subtitleLines: []
+  subtitleLines:
+  - endTime: 0
+    text: "What?! No, I wasn\u2019t finished yet! Please, go back!"

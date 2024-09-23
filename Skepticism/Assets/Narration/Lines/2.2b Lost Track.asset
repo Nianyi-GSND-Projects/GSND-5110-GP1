@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: 2.2b Lost Track
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 4f97a2408488def4fa5859a51b8a6cd2, type: 3}
-  subtitleLines: []
+  subtitleLines:
+  - endTime: 0
+    text: "Good. Now, where was I? Ughh (flipping paper)...ugh, I can\u2019t remember.
+      Lost track. Well, guess we\u2019ll have to start from the beginning."

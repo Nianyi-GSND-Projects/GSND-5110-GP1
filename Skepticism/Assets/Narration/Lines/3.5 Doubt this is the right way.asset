@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: 3.5 Doubt this is the right way
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 1d084e0ac421bd04fa34e6b027078920, type: 3}
-  subtitleLines: []
+  subtitleLines:
+  - endTime: 0
+    text: "I\u2019m seriously doubting this is the right way out."

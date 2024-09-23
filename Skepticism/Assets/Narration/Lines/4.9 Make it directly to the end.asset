@@ -13,4 +13,10 @@ MonoBehaviour:
   m_Name: 4.9 Make it directly to the end
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: f20a5c4fb0bcd3743b2eb3feccea2f0f, type: 3}
-  subtitleLines: []
+  subtitleLines:
+  - endTime: 0
+    text: "Wait what?! No! You, you can\u2019t just make it directly toward the end!
+      This isn\u2019t what I planned! Not at all! How could you do that?! Now you\u2019re
+      making me question my own sanity and game design ability. YOU\u2019RE NO FUN.
+      Okay, you win. Hooray. Take the victory certificate and get outta here. End
+      of game. Goodbye."

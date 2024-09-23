@@ -5,9 +5,9 @@ using System.Collections.Generic;
 public class NarrationLine : ScriptableObject {
 	public AudioClip clip;
 	[System.Serializable]
-	public class SubtitleLine {
+	public struct SubtitleLine {
 		public float endTime;
-		public string text;
+		[NaughtyAttributes.ResizableTextArea] public string text;
 	}
 	public List<SubtitleLine> subtitleLines;
 }

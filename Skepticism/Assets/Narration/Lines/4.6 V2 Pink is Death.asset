@@ -13,4 +13,8 @@ MonoBehaviour:
   m_Name: 4.6 V2 Pink is Death
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: edda7586dee07e84683a51ebbdd1be12, type: 3}
-  subtitleLines: []
+  subtitleLines:
+  - endTime: 0
+    text: "Oh death? How sinister\u2026but pink is too cute of a color to be death,
+      isn\u2019t it? Although, what does death mean in this game? Perhaps, bringing
+      you all the way to the start?"

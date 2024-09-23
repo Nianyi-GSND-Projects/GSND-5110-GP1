@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: 3.4 You_re running in circles
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 99fb859a220c37b4faf0693f59b631d3, type: 3}
-  subtitleLines: []
+  subtitleLines:
+  - endTime: 0
+    text: "I can\u2019t help but feel like you\u2019re just running in circles."

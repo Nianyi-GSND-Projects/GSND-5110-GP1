@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: 4.6 V1 Yellow Door is Death
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 0eb4674af8634ba4dad0738bc9dd80fc, type: 3}
-  subtitleLines: []
+  subtitleLines:
+  - endTime: 0
+    text: "Oh death? How sinister\u2026Although, what does death even mean in this
+      game? Perhaps bringing you all the way to the starting point."

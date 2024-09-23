@@ -13,4 +13,8 @@ MonoBehaviour:
   m_Name: 2.3c Bad Red Green Introduce
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: ebeb03cb2051a6e4c9226a3852c54e78, type: 3}
-  subtitleLines: []
+  subtitleLines:
+  - endTime: 0
+    text: "I can\u2019t stand this any longer, watching you stumbling around like
+      a headless fly! I just wanna get this over with you. Here, let\u2019s restart
+      this whole mess."

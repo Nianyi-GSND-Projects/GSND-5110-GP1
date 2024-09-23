@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: 3.6 You have passed here
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: a08f3352cd3e4d344b2f4e95eca46543, type: 3}
-  subtitleLines: []
+  subtitleLines:
+  - endTime: 0
+    text: "I could almost swear you\u2019ve passed this spot before."

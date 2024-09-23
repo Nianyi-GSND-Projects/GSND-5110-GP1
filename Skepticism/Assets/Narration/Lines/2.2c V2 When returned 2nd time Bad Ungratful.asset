@@ -13,4 +13,8 @@ MonoBehaviour:
   m_Name: 2.2c V2 When returned 2nd time Bad Ungratful
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 7f623d451acf41642949821d2da8b917, type: 3}
-  subtitleLines: []
+  subtitleLines:
+  - endTime: 0
+    text: "You are so impatient and ungrateful\u2026I was supposed to help you! How
+      do you know you\u2019re playing the game right? Do you even know the true objectives
+      of this game? Guess you\u2019ll have to answer those questions yourself now."

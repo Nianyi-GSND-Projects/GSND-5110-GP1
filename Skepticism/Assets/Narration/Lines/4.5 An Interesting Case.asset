@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: 4.5 An Interesting Case
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: c42aab55b212a234aa3aaeb01be07b35, type: 3}
-  subtitleLines: []
+  subtitleLines:
+  - endTime: 0
+    text: "Ooo\u2026An interesting case! Hmm, I wonder, what do these two colors
+      represent?"

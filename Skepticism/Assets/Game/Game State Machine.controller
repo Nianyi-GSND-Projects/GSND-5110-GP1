@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c441dff1407d86847b214be24050d5ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  line: {fileID: 0}
+  line: {fileID: 11400000, guid: 783f78bd895e2ce4c871a1b36b9baf98, type: 2}
   stopOnExit: 0
 --- !u!1101 &-8651067533718887007
 AnimatorStateTransition:
@@ -1082,7 +1082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c441dff1407d86847b214be24050d5ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  line: {fileID: 0}
+  line: {fileID: 11400000, guid: 17b5f4810934b724c9aa054fbc8cd3f2, type: 2}
   stopOnExit: 0
 --- !u!1101 &-4503557722663694726
 AnimatorStateTransition:

@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: 4.7 Having Trouble Deciding
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 0b8825074f8bc5044b70bfa93085bf58, type: 3}
-  subtitleLines: []
+  subtitleLines:
+  - endTime: 0
+    text: Having trouble deciding? One of these doors must lead you to the final
+      victory. Personally, I would pick the PINK one.

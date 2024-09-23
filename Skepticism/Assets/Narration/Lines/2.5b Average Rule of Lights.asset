@@ -13,4 +13,8 @@ MonoBehaviour:
   m_Name: 2.5b Average Rule of Lights
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 3e0cf64eef73de8448fa6347220d929d, type: 3}
-  subtitleLines: []
+  subtitleLines:
+  - endTime: 0
+    text: "When you step in front of a door, a light appears. If it turns green,
+      then it means you\u2019re on the right track. If it turns red, then it\u2019s
+      the wrong door. Let\u2019s give it a try."

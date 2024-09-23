@@ -13,4 +13,8 @@ MonoBehaviour:
   m_Name: 4.8 V1 Following Instructions
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 0dee393cdbb951c488811f5d146116dd, type: 3}
-  subtitleLines: []
+  subtitleLines:
+  - endTime: 0
+    text: "Congratulations! You\u2019ve won the game! Apparently following instructions
+      wasn\u2019t a bad idea at all. Wasn\u2019t it? No need to be overly skeptical
+      of what you\u2019re told to do. You did well, adventurer. Good job!"

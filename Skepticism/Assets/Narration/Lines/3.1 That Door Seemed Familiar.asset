@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: 3.1 That Door Seemed Familiar
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 2bfd30758b263b844b506d9f02724e99, type: 3}
-  subtitleLines: []
+  subtitleLines:
+  - endTime: 0
+    text: "Hmm, that room seemed a bit familiar\u2026don\u2019t you think?"

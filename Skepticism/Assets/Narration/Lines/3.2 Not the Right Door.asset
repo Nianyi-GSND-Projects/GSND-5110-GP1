@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: 3.2 Not the Right Door
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 2760c2f6feb55d84bbeda958fd1147f1, type: 3}
-  subtitleLines: []
+  subtitleLines:
+  - endTime: 0
+    text: "I\u2019m not so certain if this is the right door to go through."

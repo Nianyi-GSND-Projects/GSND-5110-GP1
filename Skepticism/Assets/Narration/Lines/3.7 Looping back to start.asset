@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: 3.7 Looping back to start
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 9c745eceb24189a40b804ec60b106711, type: 3}
-  subtitleLines: []
+  subtitleLines:
+  - endTime: 0
+    text: Promise me that you are not looping back to the start.

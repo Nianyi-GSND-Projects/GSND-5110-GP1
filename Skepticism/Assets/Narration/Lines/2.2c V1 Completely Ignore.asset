@@ -13,4 +13,9 @@ MonoBehaviour:
   m_Name: 2.2c V1 Completely Ignore
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 6771e2fd726fbd64e84d9b6a8e6be0cf, type: 3}
-  subtitleLines: []
+  subtitleLines:
+  - endTime: 0
+    text: "I see, you just want to completely ignore me. Very well. Let me ask you
+      some questions. How do you know you\u2019re playing the game right? Do you
+      even know the true objectives of this game? Guess you\u2019ll have to answer
+      those questions yourself now."

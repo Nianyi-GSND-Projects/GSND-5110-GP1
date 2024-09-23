@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: 3.3 Are you sure we haven_t been here
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: fd120d9e00157874a99ed3e0399c31b0, type: 3}
-  subtitleLines: []
+  subtitleLines:
+  - endTime: 0
+    text: "Are you sure we haven\u2019t been here before?"

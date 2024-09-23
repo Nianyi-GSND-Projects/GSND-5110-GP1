@@ -13,4 +13,8 @@ MonoBehaviour:
   m_Name: 4.4 Pulled you back
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 6ff745ec3892d144a88425b1789779ec, type: 3}
-  subtitleLines: []
+  subtitleLines:
+  - endTime: 0
+    text: "Keep on walking. You\u2019re doing good. Oh, that? It was nothing dangerous.
+      I pulled you right back, didn\u2019t I? I got you covered. You can count on
+      me!"

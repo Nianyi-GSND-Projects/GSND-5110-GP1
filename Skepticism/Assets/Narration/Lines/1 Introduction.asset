@@ -13,4 +13,15 @@ MonoBehaviour:
   m_Name: 1 Introduction
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: de912872b1cc85945a8b0da23db178c5, type: 3}
-  subtitleLines: []
+  subtitleLines:
+  - endTime: 0
+    text: "Welcome, dear adventurer.\nIt is our greatest honor to introduce you to
+      this epic game of\u2026doors.\nYes, that\u2019s it.\nThe \u201CDoors Game.\u201D\nNo
+      that\u2019s not a random name, it\u2019s, simple, yet elegant.\nNow, your goal
+      is to get to the exit of these rooms following the path just shown to you.\nYou
+      may try as many times as you wish, however, do keep in mind that you\u2019re
+      facing a 9x9 dimension set of rooms.\nIn a simpler setting of say 3 by 3, assuming
+      you do not repeat rooms walking in Hamiltonian fashion, you already have a
+      whopping 246 possible paths.\nSo do not expect to find the one correct path
+      by trial and error.\nUse your memorization; recall what you saw was the right
+      path.\nOr at times, use your imagination.\nGood luck, adventurer."

@@ -13,4 +13,9 @@ MonoBehaviour:
   m_Name: 2.4c Bad Gren Red Rules cont
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 556f6f99d0bcfa244ae03123987b4541, type: 3}
-  subtitleLines: []
+  subtitleLines:
+  - endTime: 0
+    text: "Now don\u2019t you move around and listen to what I have to say: When
+      you step in front of a door, a light appears. If it turns green, then it means
+      you\u2019re on the right track. If it turns red, then it\u2019s the wrong door.
+      Okay, give it a try."

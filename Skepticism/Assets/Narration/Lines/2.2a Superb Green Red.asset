@@ -13,4 +13,8 @@ MonoBehaviour:
   m_Name: 2.2a Superb Green Red
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 65afdc4d8731ee341b12270a78aca119, type: 3}
-  subtitleLines: []
+  subtitleLines:
+  - endTime: 0
+    text: "You know, my dear, being the sweet person you are, it\u2026pains me to
+      see you wandering around so blindly.\nHow about I give an additional feature?
+      Let\u2019s start, say, here."
