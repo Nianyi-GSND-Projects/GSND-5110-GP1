@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.Events;
+using Cinemachine;
 
 public class GameManager : MonoBehaviour {
 	#region Singleton
@@ -17,6 +19,9 @@ public class GameManager : MonoBehaviour {
 	[SerializeField] private Transform teleportDestination;
 	[SerializeField] private Animator stateMachine;
 	[SerializeField] private Room endingRoom;
+	[SerializeField] private UnityEvent onStart;
+	[SerializeField] private CinemachineVirtualCamera playerCamera, topCamera;
+	[SerializeField] private float startPeekTime = 1.0f;
 
 	public void IncreaseCounter(string counterName, int amount = 1) {
 		var value = stateMachine.GetInteger(counterName);
@@ -45,6 +50,25 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void OnExitedRoom(Room room) {
+	}
+
+	public void StartGame() {
+		StartCoroutine(StartGameCoroutine());
+	}
+
+	private System.Collections.IEnumerator StartGameCoroutine() {
+		player.ReceivesInput = false;
+
+		playerCamera.enabled = false;
+		topCamera.enabled = true;
+		yield return new WaitForSeconds(startPeekTime);
+		topCamera.enabled = false;
+		playerCamera.enabled = true;
+		yield return new WaitForSeconds(1.0f);
+
+		player.ReceivesInput = true;
+		stateMachine.SetBool("Game Started", true);
+		onStart.Invoke();
 	}
 	#endregion
 
@@ -98,6 +122,7 @@ public class GameManager : MonoBehaviour {
 	private bool hasEnteredMidGame = false;
 	public void MarkMidGameState() {
 		hasEnteredMidGame = true;
+		stateMachine.SetBool("Has Entered MG", true);
 	}
 	#endregion
 }
