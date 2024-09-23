@@ -61,7 +61,7 @@ public class Player : MonoBehaviour {
 
 	public void Interact() {
 		Ray ray = new(eye.position, eye.forward);
-		if(!Physics.Raycast(ray, out RaycastHit hit))
+		if(!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, ~0, QueryTriggerInteraction.Ignore))
 			return;
 		var target = hit.collider.transform;
 		if(!target.TryGetComponent<Interactable>(out var interactable))
