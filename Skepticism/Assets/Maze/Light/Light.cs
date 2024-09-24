@@ -25,6 +25,9 @@ public class Light : MonoBehaviour {
 	public bool IsOn {
 		get => isOn;
 		set {
+			if(!GameManager.Instance.HasEnteredMidGame)
+				value = false;
+
 			isOn = value;
 			if(renderer.material != null) {
 				Color emission = isOn ? color : Color.black;

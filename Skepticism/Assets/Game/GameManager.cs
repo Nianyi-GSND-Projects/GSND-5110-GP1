@@ -143,6 +143,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	private bool hasEnteredMidGame = false;
+	public bool HasEnteredMidGame => hasEnteredMidGame;
 	public void MarkMidGameState() {
 		hasEnteredMidGame = true;
 		stateMachine.SetBool("Has Entered MG", true);
