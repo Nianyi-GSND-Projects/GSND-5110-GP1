@@ -124,9 +124,9 @@ public class GameManager : MonoBehaviour {
 			narrationText.text = RegulateNarrationLine(sl.text);
 			if(Time.time - startTime > duration)
 				break;
-			float waitTime = duration - sl.endTime;
+			float waitTime = duration - sl.startTime;
 			if(i < line.subtitleLines.Count - 1)
-				waitTime = Mathf.Min(waitTime, line.subtitleLines[i + 1].endTime - sl.endTime);
+				waitTime = Mathf.Min(waitTime, line.subtitleLines[i + 1].startTime - sl.startTime);
 			yield return new WaitForSeconds(waitTime);
 		}
 
