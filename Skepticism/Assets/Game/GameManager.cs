@@ -192,5 +192,9 @@ public class GameManager : MonoBehaviour {
 	public void Quit() {
 		Application.Quit();
 	}
+
+	protected void OnCheat() {
+		SkipToMidGame();
+	}
 	#endregion
 }
