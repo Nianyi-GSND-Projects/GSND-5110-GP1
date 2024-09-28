@@ -141,8 +141,8 @@ public class GameManager : MonoBehaviour {
 		var cc = player.GetComponent<CharacterController>();
 		cc.enabled = false;
 		player.transform.SetPositionAndRotation(teleportDestination.position, teleportDestination.rotation);
-        cc.enabled = true;
-        Debug.Log("Player teleported.");
+		cc.enabled = true;
+		Debug.Log("Player teleported.");
 	}
 
 	private bool hasEnteredMidGame = false;
@@ -152,11 +152,33 @@ public class GameManager : MonoBehaviour {
 		stateMachine.SetBool("Has Entered MG", true);
 	}
 
+	public void ShowChoiceUi() {
+		player.ReceivesInput = false;
+		choiceUi.gameObject.SetActive(true);
+	}
+
+	[SerializeField] private Transform choiceUi;
+	[SerializeField] private UnityEvent onChoosePink, onChooseYellow;
+	public void ChooseEndingRoom(int choice) {
+		stateMachine.SetInteger("Ending Room Choice", choice);
+		if(choice == 1)
+			onChoosePink.Invoke();
+		else if(choice == 2)
+			onChooseYellow.Invoke();
+		choiceUi.gameObject.SetActive(false);
+		player.ReceivesInput = true;
+	}
+
 	public void EnterEnding(int ending) {
 		player.ReceivesInput = false;
 		stateMachine.enabled = false;
 		endingUi.gameObject.SetActive(true);
 		endingUi.GetChild(ending - 1).gameObject.SetActive(true);
+	}
+
+	[ContextMenu("Skip to Mid Game")]
+	private void SkipToMidGame() {
+		stateMachine.Play("Narration.Mid Game.Mark Game State");
 	}
 	#endregion
 }

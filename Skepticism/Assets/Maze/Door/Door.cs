@@ -16,8 +16,13 @@ public class Door : MonoBehaviour {
 
 	public void SetDoorState(float doorState) {
 		animator.SetFloat(doorStatePropertyName, doorState);
-		foreach(var light in lights) {
-			light.IsOn = doorState != 0.0f;
+
+		if(GameManager.Instance.HasEnteredMidGame) {
+			foreach(var light in lights) {
+				if(light == null)
+					continue;
+				light.IsOn = doorState != 0.0f;
+			}
 		}
 	}
 }
