@@ -138,8 +138,11 @@ public class GameManager : MonoBehaviour {
 	public Player Player => player;
 
 	public void TeleportPlayer() {
+		var cc = player.GetComponent<CharacterController>();
+		cc.enabled = false;
 		player.transform.SetPositionAndRotation(teleportDestination.position, teleportDestination.rotation);
-		Debug.Log("Player teleported.");
+        cc.enabled = true;
+        Debug.Log("Player teleported.");
 	}
 
 	private bool hasEnteredMidGame = false;
