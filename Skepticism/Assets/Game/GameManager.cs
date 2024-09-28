@@ -124,9 +124,9 @@ public class GameManager : MonoBehaviour {
 			narrationText.text = RegulateNarrationLine(sl.text);
 			if(Time.time - startTime > duration)
 				break;
-			float waitTime = duration - sl.endTime;
+			float waitTime = duration - sl.startTime;
 			if(i < line.subtitleLines.Count - 1)
-				waitTime = Mathf.Min(waitTime, line.subtitleLines[i + 1].endTime - sl.endTime);
+				waitTime = Mathf.Min(waitTime, line.subtitleLines[i + 1].startTime - sl.startTime);
 			yield return new WaitForSeconds(waitTime);
 		}
 
@@ -138,14 +138,36 @@ public class GameManager : MonoBehaviour {
 	public Player Player => player;
 
 	public void TeleportPlayer() {
+		var cc = player.GetComponent<CharacterController>();
+		cc.enabled = false;
 		player.transform.SetPositionAndRotation(teleportDestination.position, teleportDestination.rotation);
+		cc.enabled = true;
 		Debug.Log("Player teleported.");
 	}
 
 	private bool hasEnteredMidGame = false;
+	public bool HasEnteredMidGame => hasEnteredMidGame;
 	public void MarkMidGameState() {
 		hasEnteredMidGame = true;
 		stateMachine.SetBool("Has Entered MG", true);
+	}
+
+	public void ShowChoiceUi() {
+		player.ReceivesInput = false;
+		choiceUi.gameObject.SetActive(true);
+	}
+
+	[SerializeField] private Transform choiceUi;
+	[SerializeField] private UnityEvent onChoosePink, onChooseYellow;
+	[SerializeField] private Transform quitUi;
+	public void ChooseEndingRoom(int choice) {
+		stateMachine.SetInteger("Ending Room Choice", choice);
+		if(choice == 1)
+			onChoosePink.Invoke();
+		else if(choice == 2)
+			onChooseYellow.Invoke();
+		choiceUi.gameObject.SetActive(false);
+		player.ReceivesInput = true;
 	}
 
 	public void EnterEnding(int ending) {
@@ -153,6 +175,26 @@ public class GameManager : MonoBehaviour {
 		stateMachine.enabled = false;
 		endingUi.gameObject.SetActive(true);
 		endingUi.GetChild(ending - 1).gameObject.SetActive(true);
+		quitUi.gameObject.SetActive(true);
+	}
+
+	[ContextMenu("Skip to Mid Game")]
+	private void SkipToMidGame() {
+		stateMachine.Play("Narration.Mid Game.Mark Game State");
+	}
+
+	public void Died() {
+		player.ReceivesInput = false;
+		Time.timeScale = 0.0f;
+		EnterEnding(4);
+	}
+
+	public void Quit() {
+		Application.Quit();
+	}
+
+	protected void OnCheat() {
+		SkipToMidGame();
 	}
 	#endregion
 }

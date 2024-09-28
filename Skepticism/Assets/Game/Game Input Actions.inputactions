@@ -1,0 +1,34 @@
+{
+    "name": "Game Input Actions",
+    "maps": [
+        {
+            "name": "Normal",
+            "id": "7be6c94c-3ce9-4d7d-9f6a-16e1547b69a5",
+            "actions": [
+                {
+                    "name": "Cheat",
+                    "type": "Button",
+                    "id": "2de6a4cc-1f77-4a2e-88d0-7e4041d8a528",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "11dbe87b-d02f-4094-bf9d-609a7cf5b461",
+                    "path": "<Keyboard>/backquote",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cheat",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

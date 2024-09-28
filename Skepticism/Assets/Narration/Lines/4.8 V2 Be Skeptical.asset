@@ -14,7 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 6718982f7bfaa464ea8e86bdd1e05750, type: 3}
   subtitleLines:
-  - endTime: 0
-    text: "Congratulations! You\u2019ve passed my test! Now you\u2019re a proud independent
-      thinker. Don\u2019t ever believe whatever you\u2019re told to do. Doubt them
-      all. Question, everything you hear or see. Be skeptical."
+  - startTime: 0
+    text: "Congratulations! You\u2019ve passed my test!"
+  - startTime: 4
+    text: "Now you\u2019re a proud independent thinker."
+  - startTime: 8
+    text: "Don\u2019t ever believe whatever you\u2019re told to do. Believe me..."
+  - startTime: 13
+    text: You are yourself...
+  - startTime: 16
+    text: Question, everything you hear or see.
+  - startTime: 20
+    text: Be skeptical.

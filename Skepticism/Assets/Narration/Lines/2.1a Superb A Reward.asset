@@ -14,11 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 160f973aa677fcf47ace1067ce68c01d, type: 3}
   subtitleLines:
-  - endTime: 0
-    text: "Oh, you actually let me finish. I\u2019m, well, flattered, I must admit.
-      You know what? I shall give you a special tip that no one\u2019s ever had.
-      Consider this as a reward for your gentility. Here, listen to this message
-      carefully, \u201CDon\u2019t trust what you see or hear. Especially this woman.
-      She\u2026\u2026\u201D Oops, sorry, sorry, wrong clip. Try this one, \u201CNot
-      all the doors are real.\u201D Aha! Now you know the ultimate secret! I\u2019m
-      sure you will get to the exit in no time!"
+  - startTime: 0
+    text: Oh, you actually let me finish.
+  - startTime: 4
+    text: "I\u2019m, well, flattered, I must admit."
+  - startTime: 9
+    text: You know what?
+  - startTime: 10
+    text: "I shall give you a special tip that no one\u2019s ever had."
+  - startTime: 15
+    text: 'Consider this as a reward for your gentility. '
+  - startTime: 20
+    text: Here, listen to this message carefully.
+  - startTime: 25
+    text: "\u201CDon\u2019t trust what you see or hear... especially this woman.\""
+  - startTime: 29
+    text: Oops, sorry, sorry, wrong clip.
+  - startTime: 31
+    text: "Try this one, \u201CNot all the doors are real\"."
+  - startTime: 37
+    text: Aha! Now you know the ultimate secret!
+  - startTime: 40
+    text: "I\u2019m sure you will get to the exit in no time!"

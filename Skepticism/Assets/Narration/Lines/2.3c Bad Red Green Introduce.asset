@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: ebeb03cb2051a6e4c9226a3852c54e78, type: 3}
   subtitleLines:
-  - endTime: 0
+  - startTime: 0
     text: "I can\u2019t stand this any longer, watching you stumbling around like
-      a headless fly! I just wanna get this over with you. Here, let\u2019s restart
-      this whole mess."
+      a headless fly!"
+  - startTime: 8
+    text: I wanna get this over with you, as soon as possible.
+  - startTime: 12
+    text: "Here, let\u2019s restart this whole mess."

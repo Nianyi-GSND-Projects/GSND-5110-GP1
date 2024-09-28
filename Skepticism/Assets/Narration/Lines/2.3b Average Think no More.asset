@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 7e90bae98c327674a842a0c10ee32664, type: 3}
   subtitleLines:
-  - endTime: 0
-    text: Ah, it does feel nice when I can get you to listen. Merely follow my command
-      and think no more.
+  - startTime: 0
+    text: Ah, it does feel nice when I can get you to listen.
+  - startTime: 5
+    text: Merely follow my command and think no more.

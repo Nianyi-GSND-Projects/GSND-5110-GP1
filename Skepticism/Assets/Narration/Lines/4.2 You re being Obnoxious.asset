@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 812c77085bcf6f341831cbedfc03c8f3, type: 3}
   subtitleLines:
-  - endTime: 0
-    text: "You know what, you\u2019re being obnoxious at the moment. Until you find
-      a green door and go through it, I\u2019m going to keep quiet and watch you\u2026suffer."
+  - startTime: 0
+    text: "You know what, you\u2019re being obnoxious at the moment."
+  - startTime: 4
+    text: Until you find a green door and go through it,
+  - startTime: 8
+    text: "I\u2019m going to keep quiet and watch you\u2026suffer."

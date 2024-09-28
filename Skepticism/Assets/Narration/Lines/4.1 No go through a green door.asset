@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 4eff266bc1da73c4d8d2fc6fb7eff296, type: 3}
   subtitleLines:
-  - endTime: 0
-    text: "Oh no no\u2026I said green! G-R-E-E-N, green! Go through a green door,
-      please."
+  - startTime: 0
+    text: "Oh no no\u2026I said green! G-R-E-E-N, green! "
+  - startTime: 7
+    text: Go through a green door, please.
