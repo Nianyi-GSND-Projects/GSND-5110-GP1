@@ -14,9 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: f20a5c4fb0bcd3743b2eb3feccea2f0f, type: 3}
   subtitleLines:
-  - endTime: 0
-    text: "Wait what?! No! You, you can\u2019t just make it directly toward the end!
-      This isn\u2019t what I planned! Not at all! How could you do that?! Now you\u2019re
-      making me question my own sanity and game design ability. YOU\u2019RE NO FUN.
-      Okay, you win. Hooray. Take the victory certificate and get outta here. End
-      of game. Goodbye."
+  - startTime: 0
+    text: Wait, hold on..! No! No! No..wait..  you, you're not make it all the way
+      to the end!
+  - startTime: 5
+    text: Missing all the fun things planned for us!
+  - startTime: 10
+    text: 'How could you do that?! '
+  - startTime: 16
+    text: "Now you\u2019re making me question my own sanity and game design ability."
+  - startTime: 24
+    text: Okay, you win. Hooray.
+  - startTime: 26
+    text: Take the victory certificate and get outta here.
+  - startTime: 29
+    text: End of game. Goodbye.

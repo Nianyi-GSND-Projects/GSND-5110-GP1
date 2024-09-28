@@ -14,7 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 7f623d451acf41642949821d2da8b917, type: 3}
   subtitleLines:
-  - endTime: 0
-    text: "You are so impatient and ungrateful\u2026I was supposed to help you! How
-      do you know you\u2019re playing the game right? Do you even know the true objectives
-      of this game? Guess you\u2019ll have to answer those questions yourself now."
+  - startTime: 0
+    text: You are so impatient and ungrateful!!
+  - startTime: 3
+    text: I was supposed to help you!
+  - startTime: 6
+    text: "How do you know you\u2019re playing the game right?"
+  - startTime: 9
+    text: Do you even know the true objectives of this game?
+  - startTime: 13
+    text: "Guess now you\u2019ll have to answer those questions yourself."

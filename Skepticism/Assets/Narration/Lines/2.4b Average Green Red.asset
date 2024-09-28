@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 2dbc7345b3e1e9547b74a4c80db5bc9d, type: 3}
   subtitleLines:
-  - endTime: 0
-    text: "Ugh no offense, but we are not going anywhere at this pace. I believe
-      you need a bit of extra assistance. Let\u2019s restart somewhere, shall we?
-      Say, here!"
+  - startTime: 0
+    text: Ugh no offense, but we are not going anywhere at this pace.
+  - startTime: 6
+    text: I believe you need a bit of extra assistance.
+  - startTime: 10
+    text: "Let\u2019s restart somewhere, shall we?"
+  - startTime: 13
+    text: Say, here!

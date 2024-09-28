@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 0b8825074f8bc5044b70bfa93085bf58, type: 3}
   subtitleLines:
-  - endTime: 0
-    text: Having trouble deciding? One of these doors must lead you to the final
-      victory. Personally, I would pick the PINK one.
+  - startTime: 0
+    text: 'Having trouble deciding? '
+  - startTime: 4
+    text: One of these doors must lead you to the final victory.
+  - startTime: 8
+    text: Personally, I would pick the PINK one.

@@ -12,20 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 902f58c99a2532947965a306828f242e, type: 3}
   m_Name: 1 Introduction
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: de912872b1cc85945a8b0da23db178c5, type: 3}
+  clip: {fileID: 8300000, guid: 93911315f5ec085439f8020e75faa8dc, type: 3}
   subtitleLines:
   - startTime: 0
-    text: Welcome, dear adventurer.
-  - startTime: 3
-    text: "It is our greatest honor to introduce you to this epic game of\u2026doors.\nYes,
-      that\u2019s it."
-  - startTime: 6
-    text: "The \u201CDoors Game.\u201D\nNo that\u2019s not a random name, it\u2019s,
-      simple, yet elegant.\nNow, your goal is to get to the exit of these rooms following
-      the path just shown to you.\nYou may try as many times as you wish, however,
-      do keep in mind that you\u2019re facing a 9x9 dimension set of rooms.\nIn a
-      simpler setting of say 3 by 3, assuming you do not repeat rooms walking in
-      Hamiltonian fashion, you already have a whopping 246 possible paths.\nSo do
-      not expect to find the one correct path by trial and error.\nUse your memorization;
-      recall what you saw was the right path.\nOr at times, use your imagination.\nGood
-      luck, adventurer."
+    text: "Dear adventurer. It is our greatest honor to introduce you to this epic
+      game of\u2026doors."
+  - startTime: 9
+    text: "Yes, that\u2019s it. \u201CThe Doors Game.\u201D No, that's not a random
+      name, it's simple, yet elegant."
+  - startTime: 16
+    text: Now, your primary goal is to get to the exit.
+  - startTime: 20
+    text: You may try as many times as you wish.
+  - startTime: 22
+    text: However, do keep in mind that there is one and only one path that will
+      successfully take you to the exit.
+  - startTime: 29
+    text: "You\u2019re facing a 5x5 set of rooms."
+  - startTime: 32
+    text: In a simpler setting of say 3 by 3, assuming you do not repeat rooms walking
+      in Hamiltonian fashion, you already have a whopping 246 possible paths.
+  - startTime: 42
+    text: So this is not an easy task.
+  - startTime: 44
+    text: Try to be observant and resilient.
+  - startTime: 47
+    text: Good luck, adventurer.

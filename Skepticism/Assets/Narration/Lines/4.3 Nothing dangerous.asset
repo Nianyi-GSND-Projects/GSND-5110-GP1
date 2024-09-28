@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 9467af84583ce3d478a51d8f66f91308, type: 3}
   subtitleLines:
-  - endTime: 0
-    text: Yes, follow the green doors. I assure you that if you NOTHING dangerous
-      would happen.
+  - startTime: 0
+    text: Yes, follow the green doors.
+  - startTime: 4
+    text: ' I assure you that if you that NOTHING dangerous would happen you.'

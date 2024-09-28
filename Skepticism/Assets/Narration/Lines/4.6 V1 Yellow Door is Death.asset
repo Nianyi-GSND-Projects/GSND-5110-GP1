@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 0eb4674af8634ba4dad0738bc9dd80fc, type: 3}
   subtitleLines:
-  - endTime: 0
-    text: "Oh death? How sinister\u2026Although, what does death even mean in this
-      game? Perhaps bringing you all the way to the starting point."
+  - startTime: 0
+    text: "Oh death? How sinister\u2026"
+  - startTime: 5
+    text: Although, what does death even mean in this game?
+  - startTime: 10
+    text: Perhaps bringing you all the way to the starting point?

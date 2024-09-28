@@ -14,6 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 4f97a2408488def4fa5859a51b8a6cd2, type: 3}
   subtitleLines:
-  - endTime: 0
-    text: "Good. Now, where was I? Ughh (flipping paper)...ugh, I can\u2019t remember.
-      Lost track. Well, guess we\u2019ll have to start from the beginning."
+  - startTime: 0
+    text: Good.
+  - startTime: 2
+    text: Now, where was I?
+  - startTime: 7
+    text: "Ughh (flipping paper)...ugh, I can\u2019t remember."
+  - startTime: 10
+    text: Lost track.
+  - startTime: 11
+    text: "Well, guess we\u2019ll have to start from the beginning."

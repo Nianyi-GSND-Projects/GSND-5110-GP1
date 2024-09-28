@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: c42aab55b212a234aa3aaeb01be07b35, type: 3}
   subtitleLines:
-  - endTime: 0
-    text: "Ooo\u2026An interesting case! Hmm, I wonder, what do these two colors
-      represent?"
+  - startTime: 0
+    text: "Ooo\u2026An interesting case!"
+  - startTime: 4
+    text: Hmm, I wonder, what do these two colors represent?

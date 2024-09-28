@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 902f58c99a2532947965a306828f242e, type: 3}
   m_Name: 4.8 V1 Following Instructions
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 0dee393cdbb951c488811f5d146116dd, type: 3}
+  clip: {fileID: 8300000, guid: a14d0f0f274332b47971275b9a2d842c, type: 3}
   subtitleLines:
-  - endTime: 0
-    text: "Congratulations! You\u2019ve won the game! Apparently following instructions
-      wasn\u2019t a bad idea at all. Wasn\u2019t it? No need to be overly skeptical
-      of what you\u2019re told to do. You did well, adventurer. Good job!"
+  - startTime: 0
+    text: "Congratulations! You\u2019ve won the game!"
+  - startTime: 4
+    text: "Apparently following instructions wasn\u2019t a bad idea at all. Was it? "
+  - startTime: 8
+    text: "No need to be overly skeptical of what you\u2019re told to do."
+  - startTime: 12
+    text: You did well, adventurer. Good job!
