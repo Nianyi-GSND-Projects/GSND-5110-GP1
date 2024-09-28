@@ -15,11 +15,11 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 93911315f5ec085439f8020e75faa8dc, type: 3}
   subtitleLines:
   - startTime: 0
-    text: "Dear adventurer. It is our greatest honor to introduce you to this epic
-      game of\u2026doors."
+    text: "Welcome, dear adventurer. It is our greatest honor to introduce you to
+      this epic game of\u2026doors."
   - startTime: 9
     text: "Yes, that\u2019s it. \u201CThe Doors Game.\u201D No, that's not a random
-      name, it's simple, yet elegant."
+      name. It's simple, yet elegant."
   - startTime: 16
     text: Now, your primary goal is to get to the exit.
   - startTime: 20
@@ -31,7 +31,7 @@ MonoBehaviour:
     text: "You\u2019re facing a 5x5 set of rooms."
   - startTime: 32
     text: In a simpler setting of say 3 by 3, assuming you do not repeat rooms walking
-      in Hamiltonian fashion, you already have a whopping 246 possible paths.
+      in a Hamiltonian fashion, you already have a whopping 246 possible paths.
   - startTime: 42
     text: So this is not an easy task.
   - startTime: 44

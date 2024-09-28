@@ -27,7 +27,7 @@ MonoBehaviour:
   - startTime: 20
     text: Here, listen to this message carefully.
   - startTime: 25
-    text: "\u201CDon\u2019t trust what you see or hear... especially this woman.\""
+    text: "\u201CDon\u2019t trust what you see or hear... especially this woma...\""
   - startTime: 29
     text: Oops, sorry, sorry, wrong clip.
   - startTime: 31
