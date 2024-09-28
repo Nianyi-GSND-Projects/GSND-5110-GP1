@@ -159,6 +159,7 @@ public class GameManager : MonoBehaviour {
 
 	[SerializeField] private Transform choiceUi;
 	[SerializeField] private UnityEvent onChoosePink, onChooseYellow;
+	[SerializeField] private Transform quitUi;
 	public void ChooseEndingRoom(int choice) {
 		stateMachine.SetInteger("Ending Room Choice", choice);
 		if(choice == 1)
@@ -174,11 +175,22 @@ public class GameManager : MonoBehaviour {
 		stateMachine.enabled = false;
 		endingUi.gameObject.SetActive(true);
 		endingUi.GetChild(ending - 1).gameObject.SetActive(true);
+		quitUi.gameObject.SetActive(true);
 	}
 
 	[ContextMenu("Skip to Mid Game")]
 	private void SkipToMidGame() {
 		stateMachine.Play("Narration.Mid Game.Mark Game State");
+	}
+
+	public void Died() {
+		player.ReceivesInput = false;
+		Time.timeScale = 0.0f;
+		EnterEnding(4);
+	}
+
+	public void Quit() {
+		Application.Quit();
 	}
 	#endregion
 }

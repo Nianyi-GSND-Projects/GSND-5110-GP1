@@ -64,8 +64,10 @@ public class Player : MonoBehaviour {
 	}
 
 	[SerializeField] private Transform interactionIndicator;
+	[SerializeField][Min(0)] private float interactionDistance = 10.0f;
 	private Interactable focused;
 	private Vector3 focusPoint;
+	[SerializeField] private float deathHeight = -100.0f;
 
 	public void Interact() {
 		if(focused != null)
@@ -75,7 +77,7 @@ public class Player : MonoBehaviour {
 	private void UpdateInteractionFocus() {
 		focused = null;
 		Ray ray = new(eye.position, eye.forward);
-		if(!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, ~0, QueryTriggerInteraction.Ignore))
+		if(!Physics.Raycast(ray, out RaycastHit hit, interactionDistance, ~0, QueryTriggerInteraction.Ignore))
 			return;
 		var target = hit.collider.transform;
 		if(!target.TryGetComponent<Interactable>(out var interactable))
@@ -86,6 +88,10 @@ public class Player : MonoBehaviour {
 
 	protected void Update() {
 		UpdateInteractionFocus();
+		if(transform.position.y < deathHeight) {
+			GameManager.Instance.Died();
+			enabled = false;
+		}
 	}
 
 	protected void LateUpdate() {
