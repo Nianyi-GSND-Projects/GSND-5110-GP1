@@ -14,19 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 160f973aa677fcf47ace1067ce68c01d, type: 3}
   subtitleLines:
-<<<<<<< Updated upstream
-=======
-<<<<<<< Updated upstream
-  - endTime: 0
-    text: "Oh, you actually let me finish. I\u2019m, well, flattered, I must admit.
-      You know what? I shall give you a special tip that no one\u2019s ever had.
-      Consider this as a reward for your gentility. Here, listen to this message
-      carefully, \u201CDon\u2019t trust what you see or hear. Especially this woman.
-      She\u2026\u2026\u201D Oops, sorry, sorry, wrong clip. Try this one, \u201CNot
-      all the doors are real.\u201D Aha! Now you know the ultimate secret! I\u2019m
-      sure you will get to the exit in no time!"
-=======
->>>>>>> Stashed changes
   - startTime: 0
     text: Oh, you actually let me finish.
   - startTime: 4
@@ -40,11 +27,7 @@ MonoBehaviour:
   - startTime: 20
     text: Here, listen to this message carefully.
   - startTime: 25
-<<<<<<< Updated upstream
-    text: "\u201CDon\u2019t trust what you see or hear... especially this woman.\""
-=======
     text: "\u201CDon\u2019t trust what you see or hear... especially this woma...\""
->>>>>>> Stashed changes
   - startTime: 29
     text: Oops, sorry, sorry, wrong clip.
   - startTime: 31
@@ -53,7 +36,3 @@ MonoBehaviour:
     text: Aha! Now you know the ultimate secret!
   - startTime: 40
     text: "I\u2019m sure you will get to the exit in no time!"
-<<<<<<< Updated upstream
-=======
->>>>>>> Stashed changes
->>>>>>> Stashed changes
