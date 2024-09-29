@@ -60,7 +60,7 @@ Looking around, the whole room is covered with concrete walls and floor;
 the player has nowhere to go except to press the start button.
 The camera flies up and glances down, showing a solid grid of rooms.
 Each room seems similar, with two of them specifically marked as "Start" and "End" (@fig:maze-overview).
-Apparently, the player is stuck in a maze and needs find their way out.
+Apparently, the player is stuck in a maze and needs to find their way out.
 
 #grid(
 	columns: (1fr, 1fr),
@@ -279,7 +279,7 @@ All models used in-game are originally created by team members.
 Skepticism is the goal of this game.
 To achieve it, _Yathish_ proposed that a maze could be a good place for skepticism to happen, as it naturally creates uncertaincy.
 _Serena_ furtherly added that an untrustable narrator could even bring it to the next level, so that the player would always struggle on whether follow the narrator's instructions or not.
-_Serena_ has carefully designed the narration scripts cooperating with the maze's design, to create this untrustablility (@fig:average-tree).
+_Serena_ has carefully designed the narration scripts cooperating with the maze's design, to create this untrustaworthy (@fig:average-tree).
 
 #figure(
 	image("Images/average-tree.jpg", height: 13em),
@@ -288,7 +288,7 @@ _Serena_ has carefully designed the narration scripts cooperating with the maze'
 
 == Visual Guidance
 
-Inspired by _Mirror's Edge_'s excellent visual guidance design (@fig:mirrors-edge), _Nianyi_ decided that it should be a good idea to mark all interactable elements with an indentifying color.
+Inspired by _Mirror's Edge_'s excellent visual guidance design (@fig:mirrors-edge), _Nianyi_ decided that it should be a good idea to mark all interactable elements with an identifying color.
 Red was chosen as the color.
 
 With this being applied, it is easy to see in one glance the type of any door:
@@ -324,7 +324,7 @@ It also avoids a misunderstanding that the pulling door could be opened from bot
 	set align(center);
 	figure(
 		table(
-			columns: (auto, 1fr, 1fr),
+			columns: (auto, 2fr, 1fr),
 			align: (left, left, left),
 			stroke: none,
 
@@ -359,3 +359,9 @@ It also avoids a misunderstanding that the pulling door could be opened from bot
 		caption: "The MDA analysis table of the game.",
 	);
 }
+
+= Acknowledgement
+
+Special thanks to Professor Bob for successfully guiding us out of a dispute.
+With his guidance, _Nianyi_ and _Serena_ were able to find out it was all just misunderstandings.
+He has made a vital contribution for this project to finish smoothly.
