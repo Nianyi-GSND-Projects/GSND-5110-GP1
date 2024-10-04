@@ -1,10 +1,10 @@
-# GSND 5110 Group Work \#1
+# GSND 5110 Group Project \#1
 
 This README document is written and maintained by [Nianyi Wang](https://github.com/WangNianyi2001), the lead developer of this project.
 
 ## Objectives
 
-In this group work, we need to design & implement a short clip of a videogame no longer than 5 minutes to deliver a certain type of human emotion.
+In this group project, we need to design & implement a short clip of a videogame no longer than 5 minutes to deliver a certain type of human emotion.
 The emotion our group (group \#4) have chosen is: **Skeptism**.
 
 ## Project Files Organization
